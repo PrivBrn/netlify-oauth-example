@@ -64,6 +64,8 @@ function handleAccessToken() {
 //   }
 
   localStorage.removeItem(response.state);
+  
+  console.log(response.access_token)
 
   // User the token to fetch the list of sites for the user
   fetch('https://api.netlify.com/api/v1/sites/412aa186-a53e-4cd6-a2e0-f10d1e95b353/identity/613682800807dd803fc64bd7/users?page=1&per_page=15&sort=created_at', {
