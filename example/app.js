@@ -72,6 +72,7 @@ function handleAccessToken() {
     }
   }).then((response) => {
     response.json().then((json) => {
+      console.log(json)
       showOutput('Your sites: ' + json.map((site) => `<a href="${site.url}">${site.url}</a>`).join(','));
     });
   }).catch((error) => {
