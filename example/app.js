@@ -56,12 +56,12 @@ function handleAccessToken() {
   // Remove the token so it's not visible in the URL after we're done
   document.location.hash = '';
 
-  if (!localStorage.getItem(response.state)) {
-    // We need to verify the random state we set before starting the request,
-    // otherwise this could be an access token from someone else than our user
-    alert("CSRF Attack");
-    return;
-  }
+//   if (!localStorage.getItem(response.state)) {
+//     // We need to verify the random state we set before starting the request,
+//     // otherwise this could be an access token from someone else than our user
+//     alert("CSRF Attack");
+//     return;
+//   }
 
   localStorage.removeItem(response.state);
 
