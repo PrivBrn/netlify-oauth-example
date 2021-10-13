@@ -66,7 +66,7 @@ function handleAccessToken() {
   localStorage.removeItem(response.state);
 
   // User the token to fetch the list of sites for the user
-  fetch('https://api.netlify.com/api/v1/sites', {
+  fetch('https://api.netlify.com/api/v1/sites/412aa186-a53e-4cd6-a2e0-f10d1e95b353', {
     headers: {
       'Authorization': 'Bearer ' + response.access_token
     }
